@@ -4,7 +4,7 @@ import json
 from lxml import etree
 
 
-NON_IMPORTANT_ELEMENTS = ["author", "editor", "title", "booktitle", "pages", "year", "address", "journal", "volume", "number", "month", "url", "ee", "cdrom", "cite", "publisher", "note", "crossref", "isbn", "series", "school", "chapter", "publnr", "ref", "sup", "sub", "i", "tt"]
+NON_IMPORTANT_ELEMENTS = ["dblp","author", "editor", "title", "booktitle", "pages", "year", "address", "journal", "volume", "number", "month", "url", "ee", "cdrom", "cite", "publisher", "note", "crossref", "isbn", "series", "school", "chapter", "publnr", "ref", "sup", "sub", "i", "tt"]
 text_type = {"type":"text", "fields":{"keyword":{"type":"keyword", "ignore_above":256}}}
 date_type = {"type":"date"}
 
@@ -65,7 +65,6 @@ def dtdtodict(dtd_in):
                 mapping["properties"][element]["properties"][str(field)] = text_type
     print("OK")
     print("Updating main element with subelement:", end=" ")
-    del elements[list(elements.keys())[0]]
     for element in elements:
         for subelement in elements[element]["fields"]:
             if "#text" not in str(subelement):
