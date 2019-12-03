@@ -260,10 +260,10 @@
 <!--  sub elements of the title element -->
 <!ELEMENT ref (#PCDATA)>
 <!ATTLIST ref href CDATA #REQUIRED>
-<!ELEMENT sup (%titlecontents;)*>
-<!ELEMENT sub (%titlecontents;)*>
-<!ELEMENT i   (%titlecontents;)*>
-<!ELEMENT tt  (%titlecontents;)*>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT sub (#PCDATA)>
+<!ELEMENT i   (#PCDATA)>
+<!ELEMENT tt  (#PCDATA)>
 
 <!ENTITY reg   "&#174;">
 <!ENTITY micro "&#181;">
