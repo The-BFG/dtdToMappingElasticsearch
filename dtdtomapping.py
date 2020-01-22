@@ -4,7 +4,7 @@ import json
 from lxml import etree
 
 
-NON_IMPORTANT_ELEMENTS = ["dblp","author", "editor", "title", "booktitle", "pages", "year", "address", "journal", "volume", "number", "month", "url", "ee", "cdrom", "cite", "publisher", "note", "crossref", "isbn", "series", "school", "chapter", "publnr", "ref", "sup", "sub", "i", "tt"]
+NON_IMPORTANT_ELEMENTS = ["dblp", "author", "editor", "title", "booktitle", "pages", "year", "address", "journal", "volume", "number", "month", "url", "ee", "cdrom", "cite", "publisher", "note", "crossref", "isbn", "series", "school", "chapter", "publnr", "ref", "sup", "sub", "i", "tt"]
 text_type = {"type":"text", "fields":{"keyword":{"type":"keyword", "ignore_above":256}}}
 date_type = {"type":"date"}
 
